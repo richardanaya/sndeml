@@ -21,8 +21,7 @@ func SendEmail(apiKey, recipient, sender, subject, body string) error {
 	defer cancel()
 
 	// Send the message	with a 10 second timeout
-	resp, id, err := mg.Send(ctx, message)
-
+	_, _, err := mg.Send(ctx, message)
 	if err != nil {
 		return err
 	}
