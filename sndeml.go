@@ -10,8 +10,8 @@ import (
 
 // SendEmail sends an html message using mailgun
 func SendEmail(apiKey, recipient, sender, subject, body string) error {
-	domain = strings.Split(sender, "@")[1]
-	mg := mailgun.NewMailgun(yourDomain, apiKey)
+	domain := strings.Split(sender, "@")[1]
+	mg := mailgun.NewMailgun(domain, apiKey)
 
 	// The message object allows you to add attachments and Bcc recipients
 	message := mg.NewMessage(sender, subject, "", recipient)
