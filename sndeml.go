@@ -26,4 +26,5 @@ func SendEmail(apiKey, recipient, sender, subject, body string) error {
 	if err != nil {
 		return err
 	}
+	return nil
 }
