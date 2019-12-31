@@ -7,5 +7,5 @@ A simple library for sending emails with mailgun
 ```go
 import email "github.com/richardanaya/sndeml"
 
-SendEmail(apiKey, recipient, sender, subject, body) error
+SendEmail(apiKey, recipient, sender, senderName, subject, body) error
 ```
